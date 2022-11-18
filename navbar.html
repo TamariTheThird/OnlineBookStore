@@ -1,0 +1,203 @@
+<div class="container-lg">
+  
+  <!-- logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="" />
+    <span>clevr</span>
+  </div>
+
+  <!-- menu -->
+  <div class="navbar-part1">
+    <button class="menu ">
+      <span>Menu</span>
+
+     <span> <i class="fa-solid fa-caret-down arrow "></i></span>
+
+      <i class="fa-solid fa-caret-up nav-arrow"></i>
+    </button>
+
+    <!-- navigation between pages -->
+
+    <!-- search -->
+    <form class="search">
+      <input type="text" placeholder="Find books here ..." />
+      <i class="bi bi-search"></i>
+    </form>
+  </div>
+
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="#" class="nav-link active-page">home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">books</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">magazine</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">textbooks</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">audiobooks</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">recomended</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">sale</a>
+    </li>
+  </ul>
+  <div class="navbar-part2">
+    <!-- shopping cart -->
+    <div class="basket">
+      <a class="position-relative">
+        <img src="images/basket-black.png" alt="" />
+        <span
+          class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle d-none"
+        >
+          0
+        </span>
+      </a>
+    </div>
+    <!-- sign-in / sign-up -->
+    <div class="user">
+      <button type="button" class="sign-in">sign in</button>
+      <button type="button" class="sign-up">create account</button>
+    </div>
+  </div>
+</div>
+<!-- user registration / sign in form -->
+<div class="modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close">
+          <i class="fa-solid fa-square-xmark"></i>
+        </button>
+        <div class="img-div">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <h2>create account</h2>
+      </div>
+      <div class="modal-body ">
+         <!-- create account -->
+        <form class="registerForm">
+       
+          <!--first name -->
+          <div class="input-group form-floating col-12">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="First Name"
+              maxlength="20"
+            />
+            <label for="floatingInput">First Name</label>
+
+            <span class="input-group-text"
+              ><i class="fa-solid fa-user"></i
+            ></span>
+
+          
+          </div>
+
+          <!-- last name -->
+          <div class="input-group form-floating col-12">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Full Name"
+              maxlength="20"
+            />
+            <label for="floatingInput">Last Name</label>
+
+            <span class="input-group-text"
+              ><i class="fa-regular fa-user"></i
+            ></span>
+
+           
+          </div>
+          <!-- email -->
+          <div class="input-group form-floating col-12">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputGroup2"
+              placeholder="Email address"
+            />
+            <label for="floatingInputGroup2">Email</label>
+
+            <span class="input-group-text"
+              ><i class="fa-solid fa-envelope"></i
+            ></span>
+           
+          </div>
+
+          <!-- password -->
+          <div class="input-group form-floating col-12">
+            <input
+           
+              class="form-control pass"
+              id="floatingInputGroup2"
+              placeholder="Password"
+              type="password"
+              minlength="6"
+              maxlength="12"
+            />
+            <label for="floatingInputGroup2">Password</label>
+
+            <span class="input-group-text" 
+              ><i class="fa-solid fa-eye-slash pass-icon"></i
+            ></span>
+           
+          </div>
+          <!-- submit -->
+          <button type="submit" class="register-user col-12">create</button>
+        </form>  
+         <!-- sign in -->
+        <form class="signInForm">
+          <!-- email -->
+          <div class="input-group form-floating col-12">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputGroup2"
+              placeholder="Email address"
+            />
+            <label for="floatingInputGroup2">Email</label>
+
+            <span class="input-group-text"
+              ><i class="fa-solid fa-envelope"></i
+            ></span>
+           
+          </div>
+
+          <!-- password -->
+          <div class="input-group form-floating col-12">
+            <input
+           
+              class="form-control pass"
+              id="floatingInputGroup2"
+              placeholder="Password"
+          
+              minlength="6"
+              maxlength="12"
+            />
+            <label for="floatingInputGroup2">Password</label>
+
+            <span class="input-group-text" "
+              ><i class="fa-solid fa-eye-slash pass-icon"></i
+            ></span>
+           
+          </div>
+          <!-- submit -->
+          <button type="submit" class="sign-in-user col-12">sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/navbar.js"></script>
