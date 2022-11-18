@@ -71,7 +71,7 @@ li {
   box-shadow: -1px 0 1px $s-color2;
 
   .container-lg {
-    padding: 20px;
+    padding: 20px 0;
   }
   .navbar-part1 {
     display: flex;
@@ -183,7 +183,7 @@ li {
     left: 0;
     display: flex;
     top: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     justify-content: center;
     border-bottom: 1px inset $p-color2;
 
@@ -221,28 +221,30 @@ li {
 header {
   background-color: #4a0e5c;
   overflow: hidden;
-
+  padding: 50px 0;
   .container-lg {
     padding: 140px 0;
   }
+
   .mySwiper1 {
     left: 17%;
-    height: 370px;
-    position: relative;
 
     @include slider-pagination;
+    height: 380px;
 
     .swiper-slide {
-      max-height: 380px;
-      // max-width: 240px;
-
-      img {
-        border-radius: 15px;
-        @include img;
-        object-fit: fill;
+      div {
+        height: 320px;
+        width: 240px;
+        margin: 0 auto;
+        position: relative;
+        img {
+          border-radius: 15px;
+          @include img;
+          object-fit: fill;
+        }
+        @include bestseller-badge;
       }
-
-      @include bestseller-badge;
     }
   }
   .welcome-txt {
@@ -305,7 +307,7 @@ header {
       border-radius: 8px;
 
       span {
-        margin-left: 75px;
+        margin-left: 65px;
       }
     }
   }
@@ -380,14 +382,16 @@ header {
     }
   }
   .trending-book {
-    max-width: 280px;
-    height: 560px;
+    max-width: 200px;
 
+    margin: 10px auto;
     .trendbook-header {
       position: relative;
-      height: 55%;
+      height: 280px;
+
       .img-div {
         height: 100%;
+        width: 200px;
 
         img {
           border-radius: 15px;
@@ -595,10 +599,7 @@ header {
 
 // latest news
 #latest-news {
-  padding: 35px 0;
-
   .news-content {
-    padding: 30px 0 50px;
     .card {
       margin: 0 auto;
     }
@@ -661,10 +662,10 @@ header {
     box-shadow: 0px 0px 3px $p-color1;
 
     color: rgb(246, 246, 246);
-    padding: 15px 20px;
+    padding: 17px 20px;
     border-radius: 8px;
-    font-size: 16px;
-    margin: 0px auto;
+    font-size: 12px;
+    margin: 50px auto;
     i {
       margin-left: 15px;
     }
@@ -673,7 +674,7 @@ header {
 
 // testimonials
 #testimonials {
-  padding: 70px 0;
+  padding: 10px 0 30px;
   margin: 0 auto;
   .testimonial-img {
     width: 50px;
@@ -695,7 +696,6 @@ header {
 
   .swiper-wrapper {
     left: 2%;
-    padding: 30px 0;
   }
 
   .testimonials {
@@ -719,10 +719,10 @@ header {
 
   .navigation {
     display: flex;
-    justify-content: flex-end;
-    margin: 15px 80px 20px auto;
+    // justify-content: flex-end;
+    margin-left: auto;
     width: fit-content;
-
+    padding: 60px 0;
     div {
       width: 45px;
       height: 45px;
@@ -1162,7 +1162,7 @@ header {
       padding: 20px 0;
     }
     .mySwiper1 {
-      left: 0;
+      left: 2% !important;
       height: 380px;
     }
 
@@ -1183,7 +1183,7 @@ header {
 
 @media (max-width: 992px) {
   .container-lg {
-    padding: 20px 50px !important;
+    padding: 30px !important;
   }
   .txt {
     p {
@@ -1196,18 +1196,24 @@ header {
       justify-content: space-between;
     }
   }
+
+  #subscribe {
+    padding: 20px 0 50px !important;
+  }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 800px) {
   .navbar {
     .container-lg {
       flex-wrap: wrap;
+      width: 100%;
+      padding: 20px !important;
     }
     .logo {
       width: 100%;
 
       justify-content: center;
-      padding: 10px 0;
+      padding: 15px 0;
       background-color: #4a0e5c;
       img {
         width: 60px;
@@ -1225,7 +1231,7 @@ header {
         bottom: -80% !important;
       }
       .nav {
-        justify-content: center !important;
+        justify-content: flex-start !important;
         padding: 0 0 0 20px;
         .nav-item {
           padding: 5px !important;
@@ -1256,9 +1262,17 @@ header {
       font-weight: 400;
     }
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
+  .container-lg {
+    width: 100%;
+    padding: 20px !important;
+  }
   .modal {
     padding: 15px 20px;
 
@@ -1301,7 +1315,7 @@ header {
     .mySwiper3 {
       .navigation {
         margin: 0 auto;
-        padding: 15px 0;
+        padding: 40px 0;
       }
     }
   }
@@ -1309,8 +1323,11 @@ header {
   footer {
     .part1 {
       display: block;
-      // justify-content: space-between;
     }
+  }
+
+  .section-info {
+    width: 80%;
   }
 }
 
@@ -1326,10 +1343,50 @@ header {
       }
     }
   }
+
+  .welcome-txt h2,
+  .txt p {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 370px) {
+  .container-lg {
+    padding: 10px 20px !important;
+  }
+
+  .navbar {
+    .navbar-part1 {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .menu {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .search {
+        width: 100% !important;
+        margin: 0 !important;
+      }
+    }
+  }
   .modal {
     padding: 15px 10px;
+  }
+
+  #subscribe,
+  footer .part3 {
+    form {
+      flex-wrap: wrap;
+      input,
+      button {
+        width: 100% !important;
+      }
+
+      button {
+        display: block;
+        margin: 15px 0 !important;
+      }
+    }
   }
 }

@@ -9,12 +9,13 @@ $(document).ready(function () {
     pagination: { el: '.swiper-pagination', clickable: true },
     autoplay: { delay: 2000, disableOnInteraction: false },
     breakpoints: {
-      570: {
+      470: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         slidesPerGroupSkip: 2,
-        spaceBetween: 65,
+        spaceBetween: 10,
       },
+
       770: {
         slidesPerView: 3,
         slidesPerGroup: 2,

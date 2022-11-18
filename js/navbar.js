@@ -28,7 +28,7 @@ $(document).ready(function () {
   // sign up
   $('.sign-up').click(function () {
     $('.modal').show();
-    $('h2').text('create accaount');
+    $('.modal-header h2').text('create accaount');
     $('.registerForm').show();
     $('.signInForm').hide();
   });

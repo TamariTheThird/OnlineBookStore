@@ -69,7 +69,7 @@ li {
   box-shadow: -1px 0 1px #eedff4;
 }
 #navbar .container-lg {
-  padding: 20px;
+  padding: 20px 0;
 }
 #navbar .navbar-part1 {
   display: flex;
@@ -170,7 +170,6 @@ li {
   left: 0;
   display: flex;
   top: 100%;
-  margin: 0 auto;
   justify-content: center;
   border-bottom: 1px inset #380b46;
   z-index: 999;
@@ -208,20 +207,20 @@ li {
 header {
   background-color: #4a0e5c;
   overflow: hidden;
+  padding: 50px 0;
 }
 header .container-lg {
   padding: 140px 0;
 }
 header .mySwiper1 {
   left: 17%;
-  height: 370px;
-  position: relative;
+  height: 380px;
 }
 header .mySwiper1 .swiper-pagination {
   width: fit-content;
   position: absolute;
   left: 50%;
-  bottom: 0px;
+  bottom: 0;
   transform: translateX(-50%);
 }
 header .mySwiper1 .swiper-pagination-bullet {
@@ -235,16 +234,19 @@ header .mySwiper1 .swiper-pagination-bullet-active {
   width: 35px;
   background-color: #e0c6ed;
 }
-header .mySwiper1 .swiper-slide {
-  max-height: 380px;
+header .mySwiper1 .swiper-slide div {
+  height: 320px;
+  width: 240px;
+  margin: 0 auto;
+  position: relative;
 }
-header .mySwiper1 .swiper-slide img {
+header .mySwiper1 .swiper-slide div img {
   border-radius: 15px;
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
-header .mySwiper1 .swiper-slide:before {
+header .mySwiper1 .swiper-slide div:before {
   content: "best seller";
   font-size: 14px;
   text-transform: capitalize;
@@ -310,7 +312,7 @@ header .welcome-txt .view-collection a {
   font-size: 14px;
 }
 header .welcome-txt .view-collection span {
-  margin-left: 75px;
+  margin-left: 65px;
 }
 
 #about {
@@ -501,15 +503,16 @@ header .welcome-txt .view-collection span {
   margin: 0 15px;
 }
 #trending .trending-book {
-  max-width: 280px;
-  height: 560px;
+  max-width: 200px;
+  margin: 10px auto;
 }
 #trending .trending-book .trendbook-header {
   position: relative;
-  height: 55%;
+  height: 280px;
 }
 #trending .trending-book .trendbook-header .img-div {
   height: 100%;
+  width: 200px;
 }
 #trending .trending-book .trendbook-header .img-div img {
   border-radius: 15px;
@@ -724,12 +727,6 @@ header .welcome-txt .view-collection span {
   right: 7%;
 }
 
-#latest-news {
-  padding: 35px 0;
-}
-#latest-news .news-content {
-  padding: 30px 0 50px;
-}
 #latest-news .news-content .card {
   margin: 0 auto;
 }
@@ -785,17 +782,17 @@ header .welcome-txt .view-collection span {
   background-color: #8d27ae;
   box-shadow: 0px 0px 3px #9d49b8;
   color: rgb(246, 246, 246);
-  padding: 15px 20px;
+  padding: 17px 20px;
   border-radius: 8px;
-  font-size: 16px;
-  margin: 0px auto;
+  font-size: 12px;
+  margin: 50px auto;
 }
 #latest-news .view-more-different i {
   margin-left: 15px;
 }
 
 #testimonials {
-  padding: 70px 0;
+  padding: 10px 0 30px;
   margin: 0 auto;
 }
 #testimonials .testimonial-img {
@@ -818,7 +815,6 @@ header .welcome-txt .view-collection span {
 }
 #testimonials .swiper-wrapper {
   left: 2%;
-  padding: 30px 0;
 }
 #testimonials .testimonials {
   max-width: 300px;
@@ -838,9 +834,9 @@ header .welcome-txt .view-collection span {
 }
 #testimonials .navigation {
   display: flex;
-  justify-content: flex-end;
-  margin: 15px 80px 20px auto;
+  margin-left: auto;
   width: fit-content;
+  padding: 60px 0;
 }
 #testimonials .navigation div {
   width: 45px;
@@ -1242,7 +1238,7 @@ header .welcome-txt .view-collection span {
     padding: 20px 0;
   }
   header .mySwiper1 {
-    left: 0;
+    left: 2% !important;
     height: 380px;
   }
   header .swiper-slide {
@@ -1260,7 +1256,7 @@ header .welcome-txt .view-collection span {
 }
 @media (max-width: 992px) {
   .container-lg {
-    padding: 20px 50px !important;
+    padding: 30px !important;
   }
   .txt p {
     text-align: center;
@@ -1269,15 +1265,20 @@ header .welcome-txt .view-collection span {
     display: flex;
     justify-content: space-between;
   }
+  #subscribe {
+    padding: 20px 0 50px !important;
+  }
 }
-@media (max-width: 880px) {
+@media (max-width: 800px) {
   .navbar .container-lg {
     flex-wrap: wrap;
+    width: 100%;
+    padding: 20px !important;
   }
   .navbar .logo {
     width: 100%;
     justify-content: center;
-    padding: 10px 0;
+    padding: 15px 0;
     background-color: #4a0e5c;
   }
   .navbar .logo img {
@@ -1296,7 +1297,7 @@ header .welcome-txt .view-collection span {
     bottom: -80% !important;
   }
   .navbar .navbar-part1 .nav {
-    justify-content: center !important;
+    justify-content: flex-start !important;
     padding: 0 0 0 20px;
   }
   .navbar .navbar-part1 .nav .nav-item {
@@ -1323,8 +1324,15 @@ header .welcome-txt .view-collection span {
     opacity: 0.5;
     font-weight: 400;
   }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
+  .container-lg {
+    width: 100%;
+    padding: 20px !important;
+  }
   .modal {
     padding: 15px 20px;
   }
@@ -1354,10 +1362,13 @@ header .welcome-txt .view-collection span {
   }
   #testimonials .mySwiper3 .navigation {
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 40px 0;
   }
   footer .part1 {
     display: block;
+  }
+  .section-info {
+    width: 80%;
   }
 }
 @media (max-width: 470px) {
@@ -1367,10 +1378,45 @@ header .welcome-txt .view-collection span {
   .modal .modal-dialog input {
     font-size: 14px;
   }
+  .welcome-txt h2,
+  .txt p {
+    font-size: 25px;
+  }
 }
 @media (max-width: 370px) {
+  .container-lg {
+    padding: 10px 20px !important;
+  }
+  .navbar .navbar-part1 {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .navbar .navbar-part1 .menu {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .navbar .navbar-part1 .search {
+    width: 100% !important;
+    margin: 0 !important;
+  }
   .modal {
     padding: 15px 10px;
+  }
+  #subscribe form,
+  footer .part3 form {
+    flex-wrap: wrap;
+  }
+  #subscribe form input,
+  #subscribe form button,
+  footer .part3 form input,
+  footer .part3 form button {
+    width: 100% !important;
+  }
+  #subscribe form button,
+  footer .part3 form button {
+    display: block;
+    margin: 15px 0 !important;
   }
 }
 
