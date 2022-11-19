@@ -1,5 +1,4 @@
-<div class="container-lg ">
-  
+<div class="container-lg">
   <!-- logo -->
   <div class="logo">
     <img src="images/logo.png" alt="" />
@@ -8,10 +7,10 @@
 
   <!-- menu -->
   <div class="navbar-part1">
-    <button class="menu ">
+    <button class="menu">
       <span>Menu</span>
 
-     <span> <i class="fa-solid fa-caret-down arrow "></i></span>
+      <span> <i class="fa-solid fa-caret-down arrow"></i></span>
 
       <i class="fa-solid fa-caret-up nav-arrow"></i>
     </button>
@@ -54,17 +53,18 @@
       <a class="position-relative">
         <img src="images/basket-black.png" alt="" />
         <span
-          class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle d-none"
+          class="position-absolute bottom-0  rounded-circle d-none" 
         >
           0
         </span>
       </a>
     </div>
     <!-- sign-in / sign-up -->
-    <div class="user">
+    <div class="user ">
       <button type="button" class="sign-in">sign in</button>
       <button type="button" class="sign-up">create account</button>
     </div>
+   
   </div>
 </div>
 <!-- user registration / sign in form -->
@@ -79,16 +79,17 @@
           <img src="images/logo.png" alt="" />
         </div>
         <h2>create account</h2>
-      </div>
-      <div class="modal-body ">
-         <!-- create account -->
-        <form class="registerForm">
+      </div> 
+       <!-- create account -->
+      <div class="modal-body registerForm">     
+       
+        <form class="">
        
           <!--first name -->
           <div class="input-group form-floating col-12">
             <input
               type="text"
-              class="form-control"
+              class="form-control name"
               id="floatingInput"
               placeholder="First Name"
               maxlength="20"
@@ -98,15 +99,13 @@
             <span class="input-group-text"
               ><i class="fa-solid fa-user"></i
             ></span>
-
-          
           </div>
 
           <!-- last name -->
           <div class="input-group form-floating col-12">
             <input
               type="text"
-              class="form-control"
+              class="form-control last-name"
               id="floatingInput"
               placeholder="Full Name"
               maxlength="20"
@@ -115,15 +114,13 @@
 
             <span class="input-group-text"
               ><i class="fa-regular fa-user"></i
-            ></span>
-
-           
+            ></span>      
           </div>
           <!-- email -->
           <div class="input-group form-floating col-12">
             <input
               type="text"
-              class="form-control"
+              class="form-control email"
               id="floatingInputGroup2"
               placeholder="Email address"
             />
@@ -132,15 +129,16 @@
             <span class="input-group-text"
               ><i class="fa-solid fa-envelope"></i
             ></span>
-           
+             <small iv class="email-error"></small>
           </div>
+        
 
           <!-- password -->
           <div class="input-group form-floating col-12">
             <input
            
-              class="form-control pass"
-              id="floatingInputGroup2"
+              class="form-control pass pass"
+              id="floatingInputGroup2 "
               placeholder="Password"
               type="password"
               minlength="6"
@@ -151,18 +149,29 @@
             <span class="input-group-text" 
               ><i class="fa-solid fa-eye-slash pass-icon"></i
             ></span>
-           
+            <small iv class="pass-error"></small>
           </div>
+          <!-- alert -->
+          <div class="alert alert-danger" role="alert">
+      </div>
           <!-- submit -->
+         
+     
+
           <button type="submit" class="register-user col-12">create</button>
-        </form>  
-         <!-- sign in -->
-        <form class="signInForm">
+        </form>    
+      </div>
+
+      <!-- sign in -->
+      <div class="modal-body signInForm">
+
+
+        <form class="">
           <!-- email -->
           <div class="input-group form-floating col-12">
             <input
               type="text"
-              class="form-control"
+              class="form-control email"
               id="floatingInputGroup2"
               placeholder="Email address"
             />
@@ -179,7 +188,7 @@
             <input
            
               class="form-control pass"
-              id="floatingInputGroup2"
+              id="floatingInputGroup2 "
               placeholder="Password"
           
               minlength="6"
@@ -192,12 +201,19 @@
             ></span>
            
           </div>
+<!-- alert -->
+          <div class="alert alert-danger" role="alert">
+          </div>
           <!-- submit -->
           <button type="submit" class="sign-in-user col-12">sign in</button>
         </form>
+
       </div>
-    </div>
+    </div>   
   </div>
 </div>
 
+
 <script src="js/navbar.js"></script>
+<script src="js/auth.js"></script>
+

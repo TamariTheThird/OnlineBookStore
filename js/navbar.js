@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // menu toggle
   $('.nav').hide();
   $('.nav-arrow').hide();
 
@@ -12,19 +13,6 @@ $(document).ready(function () {
     $(this).toggleClass('menu-active');
   });
 
-  let pass = $('.pass');
-  $('.pass-icon').click(function () {
-    if (pass.prop('type') == 'password') {
-      $(this).removeClass('fa-eye-slash');
-      $(this).addClass(' fa-eye');
-      pass.attr('type', 'text');
-    } else {
-      $(this).removeClass('fa-eye');
-      $(this).addClass(' fa-eye-slash');
-      pass.attr('type', 'password');
-    }
-  });
-
   // sign up
   $('.sign-up').click(function () {
     $('.modal').show();
@@ -34,15 +22,10 @@ $(document).ready(function () {
   });
 
   // sign in
-
   $('.sign-in').click(function () {
     $('.modal').show();
     $('.modal-header h2').text('sign in');
     $('.registerForm').hide();
     $('.signInForm').show();
-  });
-
-  $('.close').click(function () {
-    $('.modal').hide();
   });
 });

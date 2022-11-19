@@ -76,7 +76,7 @@ li {
   .navbar-part1 {
     display: flex;
     justify-content: space-between;
-
+    position: relative;
     .menu {
       font-weight: 500;
       color: $primaryColor;
@@ -84,7 +84,6 @@ li {
       padding: 0 20px 0 17px;
       display: flex;
       align-items: center;
-      position: relative;
 
       .arrow {
         display: block;
@@ -96,9 +95,9 @@ li {
     .nav-arrow {
       font-size: 40px;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 120%;
+      left: 5%;
+      bottom: -80%;
+
       color: $primaryColor;
     }
     .menu-active {
@@ -149,19 +148,24 @@ li {
     .basket {
       width: 33px;
       height: 30px;
-      margin: 0 10px;
+      margin: 0 15px 0 0;
       img {
         @include img;
       }
     }
     .user {
       font-weight: 900;
+
       button {
-        padding: 0 15px;
         text-shadow: 0 0 1px grey;
       }
       .sign-up {
         color: $primaryColor;
+        padding: 0 8px;
+        &:hover {
+          background-color: $primaryColor;
+          color: $light;
+        }
       }
 
       .sign-in {
@@ -170,8 +174,33 @@ li {
 
       span {
         font-size: 22px;
-
         color: $primaryColor;
+      }
+    }
+
+    .active-user {
+      display: inline-flex;
+      align-items: center;
+      height: 55px;
+      padding: 0 20px 0 0;
+      border: 1px solid $p-color1;
+      text-transform: capitalize;
+      color: $primaryColor;
+      border-radius: 8px;
+      margin-left: 10px;
+
+      .user-avatar {
+        width: 65px;
+        height: 60px;
+        img {
+          @include img;
+          object-fit: fill;
+          border-radius: 50%;
+        }
+      }
+
+      span {
+        font-size: 14px;
       }
     }
   }
@@ -669,6 +698,9 @@ header {
     i {
       margin-left: 15px;
     }
+    &:hover {
+      box-shadow: 0 0 7px $p-color3;
+    }
   }
 }
 
@@ -956,12 +988,13 @@ header {
     border-top: 1px solid $secondaryColor;
   }
 }
-
+// sign in / sign up
 .modal {
   background-color: $p-color2;
   margin: 0 !important;
 
   .modal-dialog {
+    position: relative;
     .modal-content {
       background-color: $p-color2;
       width: 420px;
@@ -1007,7 +1040,7 @@ header {
         form {
           .form-floating {
             position: relative;
-            margin-bottom: 26px;
+            margin-bottom: 33px;
             &:last-child {
               margin: 0;
             }
@@ -1038,14 +1071,12 @@ header {
             border-bottom: 2px solid $textColor;
           }
 
-          .validation-errors {
-            small {
-              display: block;
-              color: $color2;
-              margin-top: 5px !important;
-              padding: 0 10px;
-              transition: ease-in-out;
-            }
+          small {
+            display: block;
+            position: absolute;
+            color: $color2;
+            bottom: -50%;
+            transition: ease-in-out;
           }
         }
       }
@@ -1057,18 +1088,27 @@ header {
         border: 2px solid $color2;
         font-size: 22px;
         border-radius: 8px;
-
-        &:hover {
-          background-color: transparent;
-        }
+        margin-bottom: 0px !important;
         &:focus {
           border: 2px solid $secondaryColor;
+        }
+        &:disabled {
+          opacity: 0.3;
+        }
+      }
+
+      .signInForm {
+        form {
+          button {
+            margin: 20px 0;
+          }
         }
       }
     }
   }
   position: fixed;
 }
+
 .modal::before {
   content: '';
   display: block;
@@ -1079,20 +1119,14 @@ header {
   left: 0;
 
   border-bottom-right-radius: 100%;
-  background-color: $color2;
-  opacity: 0.675;
+  background-color: $primaryColor;
+  opacity: 0.45;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: $color2;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background-color: $secondaryColor;
-  border-radius: 10px;
-}
+// scrollbar
+
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none;
 }
 
 @media (min-width: 1240px) {
@@ -1262,10 +1296,6 @@ header {
       font-weight: 400;
     }
   }
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 @media (max-width: 576px) {
@@ -1356,6 +1386,9 @@ header {
   }
 
   .navbar {
+    .container-lg {
+      padding: 10px !important;
+    }
     .navbar-part1 {
       flex-wrap: wrap;
       flex-direction: column-reverse;
@@ -1364,12 +1397,17 @@ header {
         justify-content: center;
         margin-top: 10px;
       }
+
+      .nav-arrow {
+        z-index: -1;
+      }
       .search {
         width: 100% !important;
         margin: 0 !important;
       }
     }
   }
+
   .modal {
     padding: 15px 10px;
   }

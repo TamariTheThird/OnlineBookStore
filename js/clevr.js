@@ -56,7 +56,7 @@ $(document).ready(function () {
   // testimonials
   var swiper = new Swiper('.mySwiper3', {
     spaceBetween: 25,
-
+    loop: true,
     navigation: {
       nextEl: '.next',
       prevEl: '.prev',
@@ -65,7 +65,6 @@ $(document).ready(function () {
     breakpoints: {
       0: {
         slidesPerView: 1,
-
         spaceBetween: 0,
       },
       420: {
