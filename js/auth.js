@@ -39,9 +39,10 @@ $(document).ready(function () {
 
   // close form
   $('.close').click(function () {
-    $('.modal').hide();
-    $('input').val('');
     $('.alert').hide();
+    $('input').val('');
+
+    $('.modal').hide();
   });
 
   //
@@ -78,13 +79,12 @@ $(document).ready(function () {
       });
 
       localStorage.setItem('Users', JSON.stringify(users));
-
-      $('.modal').hide();
       $('input').val('');
       $('.user').html(` <div class="active-user">
 <span class="user-avatar"><img src="images/user-icon.png" alt=""></span>
 <span class="name">user account</span> 
 </div>`);
+      $('.modal').hide();
     }
 
     console.log(users);
