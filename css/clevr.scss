@@ -53,7 +53,7 @@ li {
   margin: 50px auto;
   h4 {
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 900;
     padding: 15px 0;
   }
   p {
@@ -248,24 +248,27 @@ li {
 
 // header
 header {
-  background-color: #4a0e5c;
+  background-color: #461356;
   overflow: hidden;
   padding: 50px 0;
   .container-lg {
-    padding: 140px 0;
+    padding: 120px 0;
   }
 
   .mySwiper1 {
     left: 17%;
 
     @include slider-pagination;
-    height: 380px;
+    height: 400px;
 
     .swiper-slide {
+      border-radius: 15px;
       div {
-        height: 320px;
+        height: 330px;
         width: 240px;
         margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 0px 0px 30px #551868;
         position: relative;
         img {
           border-radius: 15px;
@@ -291,7 +294,7 @@ header {
       color: $light;
       text-transform: capitalize;
 
-      line-height: 1.2;
+      line-height: 1.5;
       font-weight: 400;
       strong {
         font-weight: 900;
@@ -360,11 +363,12 @@ header {
   h6 {
     text-transform: capitalize;
     padding: 8px 0;
-    font-weight: 660;
+    font-weight: 700;
   }
   p {
     font-size: 11px;
     color: grey;
+    // padding-right: 8px;
   }
 }
 
@@ -488,6 +492,141 @@ header {
 }
 
 // best sellers
+// #best-sellers {
+//   h4 {
+//     font-weight: 700;
+//   }
+//   a {
+//     color: #9025ac;
+//     font-weight: 600;
+//     font-size: 13px;
+//     justify-self: center;
+//     i {
+//       margin-left: 5px;
+//     }
+//   }
+
+//   .mySwiper2 {
+//     padding: 0 95px;
+
+//     .swiper-slide {
+//       height: 360px;
+
+//       .bestsell {
+//         width: 400px;
+//         height: 240px;
+//         display: flex;
+//         align-items: center;
+
+//         .book-cover {
+//           width: 40%;
+//           height: 100%;
+
+//           img {
+//             @include img;
+//             border-radius: 13px;
+//             object-fit: fill;
+//           }
+//         }
+
+//         .book-descr {
+//           width: 60%;
+//           padding-left: 25px;
+//           .book-info {
+//             padding-top: 7px;
+//             .category {
+//               padding: 9px 12px 7px;
+//               border-radius: 8px;
+//               font-size: 12px;
+//               text-transform: capitalize;
+//               background-color: #f7e7fc;
+//               color: #772194;
+//               font-weight: 400;
+//             }
+//             .rate {
+//               padding: 9px 12px;
+//               color: #ff7c00;
+//               font-size: 12px;
+//               background-color: #ffd586;
+//               margin-left: 10px;
+//               border-radius: 8px;
+
+//               i {
+//                 margin-right: 5px;
+//               }
+//             }
+//           }
+//           .book-title {
+//             padding: 25px 15px 25px 0;
+//             text-transform: capitalize;
+
+//             .title {
+//               font-size: 20px;
+//               font-weight: 700;
+//             }
+//             .author {
+//               font-size: 16px;
+//               color: gray;
+//             }
+//           }
+//         }
+
+//         .book-price {
+//           padding: 15px 0;
+//           .current-price {
+//             font-size: 25px;
+//             font-weight: bold;
+//             color: #772194;
+//           }
+//           .price {
+//             font-size: 15px;
+//             text-decoration: line-through;
+//             color: gray;
+//             display: inline-block;
+//             margin: 0 7px;
+//           }
+//         }
+//       }
+//     }
+
+//     &::before {
+//       @include bestseller-before-aft;
+//       left: 0;
+//     }
+//     &::after {
+//       @include bestseller-before-aft;
+//       right: 0;
+//     }
+
+//     @include slider-navigation;
+
+//     position: relative;
+
+//     .prev,
+//     .next {
+//       width: 45px;
+//       height: 45px;
+//       border-radius: 50%;
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%);
+
+//       i {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//       }
+//     }
+//     .prev {
+//       left: 5%;
+//     }
+//     .next {
+//       right: 7%;
+//     }
+//   }
+// }
+
 #best-sellers {
   h4 {
     font-weight: 700;
@@ -584,10 +723,6 @@ header {
         }
       }
     }
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      display: none;
-    }
 
     position: relative;
 
@@ -609,6 +744,7 @@ header {
       border-radius: 50%;
       position: absolute;
       top: 50%;
+      z-index: 2;
 
       i {
         position: absolute;
@@ -617,6 +753,136 @@ header {
         transform: translate(-50%, -50%);
       }
     }
+    .prev {
+      left: 5%;
+    }
+    .next {
+      right: 7%;
+    }
+  }
+}
+
+// flash sale
+
+#flash-sale {
+  background-color: #5b067d;
+  padding: 70px 0;
+  .container-fluid {
+    padding-left: 95px;
+  }
+
+  .sale-descr {
+    width: 25%;
+    color: $light;
+    h1 {
+      text-transform: capitalize;
+      font-weight: 900;
+      padding: 10px 0;
+    }
+    p {
+      font-size: 12px;
+      color: $p-color5;
+    }
+
+    .time {
+      display: inline-flex;
+      border: 1px solid $p-color1;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin: 15px 0;
+      span {
+        padding: 0 15px;
+        p {
+          margin: 0;
+          font-weight: 400;
+          text-align: center;
+          &:first-child {
+            font-size: 22px;
+            color: $light;
+
+            letter-spacing: 1px;
+          }
+          &:nth-child(2) {
+            font-size: 10px;
+            color: $p-color5;
+          }
+        }
+      }
+    }
+  }
+
+  .mySwiper4 {
+    // background-color: #686868;
+
+    width: 75%;
+    .swiper-wrapper {
+      left: 7%;
+
+      position: relative;
+      z-index: 1;
+      .swiper-slide {
+        .book-sale {
+          background-color: #380b46;
+          border-radius: 15px;
+          width: 480px;
+          height: 260px;
+          display: flex;
+          flex-wrap: nowrap;
+          padding: 15px;
+
+          .img-div {
+            width: 35%;
+            height: 100%;
+            // padding-right: 15px;
+            img {
+              @include img;
+              border-radius: 20px;
+              object-fit: fill;
+            }
+          }
+        }
+
+        .book-info {
+          color: $light;
+          width: 65%;
+          font-size: 12px;
+          .rate {
+            display: inline-block;
+            // width: fit-content;
+            .fa-star {
+              color: $color1;
+              font-size: 10px;
+              padding: 1px;
+            }
+            .checked {
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    // @include slider-navigation;
+
+    .prev,
+    .next {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      background-color: $light;
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primaryColor;
+      }
+    }
+
     .prev {
       left: 5%;
     }
@@ -662,18 +928,19 @@ header {
   }
 
   .card-body {
-    padding: 15px 15px 10px;
+    padding: 15px 0px 10px;
 
     h6 {
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 900;
       line-height: 1.5;
     }
     p {
       font-size: 12px;
       color: grey;
       padding: 5px 0;
-      span {
-        font-size: 13px;
+      a {
+        font-size: 11px;
         color: $primaryColor;
 
         font-weight: 600;
@@ -751,7 +1018,6 @@ header {
 
   .navigation {
     display: flex;
-    // justify-content: flex-end;
     margin-left: auto;
     width: fit-content;
     padding: 60px 0;
@@ -1196,7 +1462,7 @@ header {
       padding: 20px 0;
     }
     .mySwiper1 {
-      left: 2% !important;
+      left: 0%;
       height: 380px;
     }
 
@@ -1331,6 +1597,14 @@ header {
     }
   }
 
+  #about {
+    .col-10 {
+      text-align: center;
+      .img {
+        margin: 0 auto;
+      }
+    }
+  }
   .mySwiper2 {
     .swiper-wrapper {
       justify-content: center;

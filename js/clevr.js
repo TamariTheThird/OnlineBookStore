@@ -42,8 +42,6 @@ $(document).ready(function () {
       930: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-
-        // spaceBetween: 60,
       },
       1350: {
         slidesPerView: 3,
@@ -75,6 +73,27 @@ $(document).ready(function () {
       },
       1400: {
         slidesPerView: 4,
+      },
+    },
+  });
+
+  // flash sale
+  var swiper = new Swiper('.mySwiper4', {
+    spaceBetween: 40,
+
+    // loop: true,
+    navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+    },
+    // autoplay: {
+    //   delay: 3500,
+    //   disableOnInteraction: false,
+    // },
+    breakpoints: {
+      930: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
       },
     },
   });

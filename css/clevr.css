@@ -54,7 +54,7 @@ li {
 }
 .section-info h4 {
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 900;
   padding: 15px 0;
 }
 .section-info p {
@@ -232,16 +232,16 @@ li {
 }
 
 header {
-  background-color: #4a0e5c;
+  background-color: #461356;
   overflow: hidden;
   padding: 50px 0;
 }
 header .container-lg {
-  padding: 140px 0;
+  padding: 120px 0;
 }
 header .mySwiper1 {
   left: 17%;
-  height: 380px;
+  height: 400px;
 }
 header .mySwiper1 .swiper-pagination {
   width: fit-content;
@@ -252,19 +252,24 @@ header .mySwiper1 .swiper-pagination {
 }
 header .mySwiper1 .swiper-pagination-bullet {
   width: 23px;
-  height: 5px;
+  height: 4px;
   border-radius: 3px;
   background-color: #ae81c4;
-  margin: 0 20px;
+  margin: 0 23px;
 }
 header .mySwiper1 .swiper-pagination-bullet-active {
   width: 35px;
   background-color: #e0c6ed;
 }
+header .mySwiper1 .swiper-slide {
+  border-radius: 15px;
+}
 header .mySwiper1 .swiper-slide div {
-  height: 320px;
+  height: 330px;
   width: 240px;
   margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px #551868;
   position: relative;
 }
 header .mySwiper1 .swiper-slide div img {
@@ -297,7 +302,7 @@ header .welcome-txt h2 {
   font-size: 40px;
   color: white;
   text-transform: capitalize;
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 400;
 }
 header .welcome-txt h2 strong {
@@ -359,7 +364,7 @@ header .welcome-txt .view-collection span {
 #about h6 {
   text-transform: capitalize;
   padding: 8px 0;
-  font-weight: 660;
+  font-weight: 700;
 }
 #about p {
   font-size: 11px;
@@ -688,10 +693,6 @@ header .welcome-txt .view-collection span {
   display: inline-block;
   margin: 0 7px;
 }
-#best-sellers .mySwiper2 .swiper-button-next::after,
-#best-sellers .mySwiper2 .swiper-button-prev::after {
-  display: none;
-}
 #best-sellers .mySwiper2::before {
   content: "";
   display: block;
@@ -713,6 +714,10 @@ header .welcome-txt .view-collection span {
   top: 0;
   z-index: 2;
   right: 0;
+}
+#best-sellers .mySwiper2 .swiper-button-next::after,
+#best-sellers .mySwiper2 .swiper-button-prev::after {
+  display: none;
 }
 #best-sellers .mySwiper2 .prev,
 #best-sellers .mySwiper2 .next:active {
@@ -739,6 +744,7 @@ header .welcome-txt .view-collection span {
   border-radius: 50%;
   position: absolute;
   top: 50%;
+  z-index: 2;
 }
 #best-sellers .mySwiper2 .prev i,
 #best-sellers .mySwiper2 .next i {
@@ -751,6 +757,119 @@ header .welcome-txt .view-collection span {
   left: 5%;
 }
 #best-sellers .mySwiper2 .next {
+  right: 7%;
+}
+
+#flash-sale {
+  background-color: #5b067d;
+  padding: 70px 0;
+}
+#flash-sale .container-fluid {
+  padding-left: 95px;
+}
+#flash-sale .sale-descr {
+  width: 25%;
+  color: white;
+}
+#flash-sale .sale-descr h1 {
+  text-transform: capitalize;
+  font-weight: 900;
+  padding: 10px 0;
+}
+#flash-sale .sale-descr p {
+  font-size: 12px;
+  color: #c5b4ca;
+}
+#flash-sale .sale-descr .time {
+  display: inline-flex;
+  border: 1px solid #9d49b8;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+#flash-sale .sale-descr .time span {
+  padding: 0 15px;
+}
+#flash-sale .sale-descr .time span p {
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+#flash-sale .sale-descr .time span p:first-child {
+  font-size: 22px;
+  color: white;
+  letter-spacing: 1px;
+}
+#flash-sale .sale-descr .time span p:nth-child(2) {
+  font-size: 10px;
+  color: #c5b4ca;
+}
+#flash-sale .mySwiper4 {
+  width: 75%;
+}
+#flash-sale .mySwiper4 .swiper-wrapper {
+  left: 7%;
+  position: relative;
+  z-index: 1;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-sale {
+  background-color: #380b46;
+  border-radius: 15px;
+  width: 480px;
+  height: 260px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15px;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-sale .img-div {
+  width: 35%;
+  height: 100%;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-sale .img-div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: fill;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-info {
+  color: white;
+  width: 65%;
+  font-size: 12px;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-info .rate {
+  display: inline-block;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-info .rate .fa-star {
+  color: #ff7a01;
+  font-size: 10px;
+  padding: 1px;
+}
+#flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-info .rate .checked {
+  color: #fdf8fe;
+}
+#flash-sale .mySwiper4 .prev,
+#flash-sale .mySwiper4 .next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: white;
+}
+#flash-sale .mySwiper4 .prev i,
+#flash-sale .mySwiper4 .next i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8d27ae;
+}
+#flash-sale .mySwiper4 .prev {
+  left: 5%;
+}
+#flash-sale .mySwiper4 .next {
   right: 7%;
 }
 
@@ -783,10 +902,11 @@ header .welcome-txt .view-collection span {
   object-position: top;
 }
 #latest-news .card-body {
-  padding: 15px 15px 10px;
+  padding: 15px 0px 10px;
 }
 #latest-news .card-body h6 {
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 900;
   line-height: 1.5;
 }
 #latest-news .card-body p {
@@ -794,8 +914,8 @@ header .welcome-txt .view-collection span {
   color: grey;
   padding: 5px 0;
 }
-#latest-news .card-body p span {
-  font-size: 13px;
+#latest-news .card-body p a {
+  font-size: 11px;
   color: #8d27ae;
   font-weight: 600;
 }
@@ -882,6 +1002,10 @@ header .welcome-txt .view-collection span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#testimonials .navigation .swiper-button-next::after,
+#testimonials .navigation .swiper-button-prev::after {
+  display: none;
 }
 #testimonials .navigation .prev,
 #testimonials .navigation .next:active {
@@ -1265,7 +1389,7 @@ header .welcome-txt .view-collection span {
     padding: 20px 0;
   }
   header .mySwiper1 {
-    left: 2% !important;
+    left: 0%;
     height: 380px;
   }
   header .swiper-slide {
@@ -1377,6 +1501,12 @@ header .welcome-txt .view-collection span {
   }
   header .mySwiper1 {
     display: none;
+  }
+  #about .col-10 {
+    text-align: center;
+  }
+  #about .col-10 .img {
+    margin: 0 auto;
   }
   .mySwiper2 .swiper-wrapper {
     justify-content: center;
