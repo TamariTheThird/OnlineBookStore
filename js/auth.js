@@ -3,9 +3,9 @@ $(document).ready(function () {
   let email = $('.email');
   email.keyup(function () {
     if (!email.val().match('@')) {
-      $('.email-error').text('* Please use valid email');
+      $('.email-error').show().text('* Please use valid email');
     } else {
-      $('.email-error').text('');
+      $('.email-error').hide();
     }
   });
 
@@ -13,9 +13,11 @@ $(document).ready(function () {
   let pass = $('.pass');
   pass.keyup(function () {
     if ((pass.val().length < 6) | !pass.val().match(/[0-9]/)) {
-      $('.pass-error').text('* Required min. 6 symbols including numbers');
+      $('.pass-error')
+        .show()
+        .text('* Required min. 6 symbols including numbers');
     } else {
-      $('.pass-error').text('');
+      $('.pass-error').hide();
     }
   });
 
@@ -41,6 +43,8 @@ $(document).ready(function () {
   $('.close').click(function () {
     $('.alert').hide();
     $('input').val('');
+    $('.pass-error').hide();
+    $('.email-error').hide();
 
     $('.modal').hide();
   });
@@ -86,8 +90,6 @@ $(document).ready(function () {
 </div>`);
       $('.modal').hide();
     }
-
-    console.log(users);
   });
 
   // sign in

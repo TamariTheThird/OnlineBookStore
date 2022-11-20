@@ -1210,24 +1210,23 @@ header .welcome-txt .view-collection span {
 
 .modal {
   background-color: #380b46;
-  margin: 0 !important;
-  position: fixed;
 }
 .modal .modal-dialog {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
 }
 .modal .modal-dialog .modal-content {
   background-color: #380b46;
-  width: 420px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 1px 0px 3px #fdf8fe;
-  margin: 0 auto;
 }
 .modal .modal-dialog .modal-content .modal-header {
   display: block;
   border: none;
-  padding: 40px 0 0 !important;
+  padding: 30px 0 0 !important;
 }
 .modal .modal-dialog .modal-content .modal-header .close {
   font-size: 30px;
@@ -1293,6 +1292,7 @@ header .welcome-txt .view-collection span {
   color: #c72368;
   bottom: -50%;
   transition: ease-in-out;
+  margin-bottom: 7px;
 }
 .modal .modal-dialog .modal-content button[type=submit] {
   background-color: #c72368;
@@ -1309,8 +1309,11 @@ header .welcome-txt .view-collection span {
 .modal .modal-dialog .modal-content button[type=submit]:disabled {
   opacity: 0.3;
 }
+.modal .modal-dialog .modal-content .signInForm form .form-floating {
+  margin-bottom: 40px !important;
+}
 .modal .modal-dialog .modal-content .signInForm form button {
-  margin: 20px 0;
+  margin-bottom: 15px !important;
 }
 
 .modal::before {
