@@ -1302,14 +1302,13 @@ header .welcome-txt .view-collection span {
 .modal {
   background-color: #380b46;
 }
-.modal .modal-dialog {
-  width: 420px;
-}
 .modal .modal-dialog .modal-content {
+  width: 420px;
   background-color: #380b46;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 1px 0px 3px #fdf8fe;
+  margin: 0 auto;
 }
 .modal .modal-dialog .modal-content .modal-header {
   display: block;
