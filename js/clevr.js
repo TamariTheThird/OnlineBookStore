@@ -89,32 +89,24 @@ $(document).ready(function () {
       nextEl: '.next',
       prevEl: '.prev',
     },
-
+    spaceBetween: 25,
     loop: true,
-
     slidesPerView: 2,
-    // autoplay: {
-    //   delay: 3500,
-    //   disableOnInteraction: false,
-    // },
-    spaceBetween: 30,
-    // breakpoints: {
-    //   0: {
-    //     slidesPerView: 1,
-    //     slidesPerGroup: 1,
-    //     // spaceBetween: 0,
-    //   },
-    //   992: {
-    //     slidesPerView: 2,
-    //     slidesPerGroup: 1,
-    //     // spaceBetween: 100,
-    //     slidesPerGroupSkip: 1,
-    //   },
-    //   1400: {
-    //     slidesPerView: 2,
-
-    //     slidesPerGroup: 1,
-    //   },
-    // },
+    slidesPerGroup: 1,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      700: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+      880: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+      },
+    },
   });
 });

@@ -606,6 +606,7 @@ header .welcome-txt .view-collection span {
 
 #best-sellers h4 {
   font-weight: 700;
+  margin-bottom: 40px;
 }
 #best-sellers a {
   color: #9025ac;
@@ -745,6 +746,7 @@ header .welcome-txt .view-collection span {
   background-color: #5b067d;
   padding: 70px 0;
   overflow: hidden;
+  margin: 30px 0;
 }
 #flash-sale .sale-descr {
   color: white;
@@ -783,25 +785,24 @@ header .welcome-txt .view-collection span {
   font-size: 10px;
   color: #c5b4ca;
 }
-#flash-sale .container-lg {
-  margin-right: 0;
+#flash-sale .mySwiper4 {
+  left: 15%;
 }
 #flash-sale .mySwiper4 .swiper-wrapper {
-  left: 3%;
+  left: 2%;
 }
 #flash-sale .mySwiper4 .swiper-wrapper .swiper-slide {
-  margin-left: 20px;
+  width: 460px;
 }
 #flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-sale {
   background-color: #380b46;
   border-radius: 15px;
-  width: 440px;
+  width: 100%;
   height: 260px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   padding: 17px;
-  box-shadow: 0px 0px 30px #380b46;
 }
 #flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-sale .img-div {
   width: 40%;
@@ -868,7 +869,7 @@ header .welcome-txt .view-collection span {
 }
 #flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-info ul li:nth-child(3) .progress {
   height: 3px;
-  width: 70%;
+  width: 65%;
   background-color: #fdf8fe;
   margin: 10px 0 5px 0;
 }
@@ -887,13 +888,13 @@ header .welcome-txt .view-collection span {
   background-color: #9d49b8;
   border-radius: 50%;
   position: absolute;
-  right: 3%;
+  right: 0%;
   top: 50%;
   transform: translateY(-50%);
 }
 #flash-sale .mySwiper4 .swiper-wrapper .swiper-slide .book-info ul li .add-book img {
-  width: 40%;
-  height: 40%;
+  width: 35%;
+  height: 35%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -941,7 +942,7 @@ header .welcome-txt .view-collection span {
   left: 1%;
 }
 #flash-sale .mySwiper4 .next {
-  right: 10%;
+  right: 15%;
 }
 #flash-sale .mySwiper4 .swiper-slide-next {
   filter: blur(1px);
@@ -1515,6 +1516,21 @@ header .welcome-txt .view-collection span {
   #subscribe {
     padding: 20px 0 50px !important;
   }
+  #flash-sale .mySwiper4 {
+    left: 0;
+  }
+  #flash-sale .mySwiper4 .swiper-wrapper {
+    left: 0;
+  }
+  #flash-sale .prev {
+    left: 0%;
+  }
+  #flash-sale .next {
+    right: 3% !important;
+  }
+  #flash-sale .sale-descr {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 880px) {
   .mySwiper2 {
@@ -1526,6 +1542,7 @@ header .welcome-txt .view-collection span {
   }
   .mySwiper2 .swiper-wrapper .swiper-slide {
     height: 100% !important;
+    margin: 0 auto !important;
   }
   .mySwiper2 .bestsell {
     display: flex !important;
@@ -1538,11 +1555,12 @@ header .welcome-txt .view-collection span {
   }
   .mySwiper2 .bestsell .book-descr {
     width: 100% !important;
-    padding: 5px 0 0 !important;
+    padding: 10px 0 0 !important;
     text-align: center;
   }
   .mySwiper2 .bestsell .book-descr .book-title {
     padding-bottom: 10px !important;
+    padding-right: 0 !important;
   }
   .mySwiper2 .bestsell .book-descr .book-price {
     padding: 0 !important;
@@ -1553,14 +1571,14 @@ header .welcome-txt .view-collection span {
   }
   .mySwiper2 .bestseller-header h4 {
     width: 100%;
+    margin-bottom: 20px !important;
   }
   .mySwiper2 .bestseller-header a {
     position: absolute;
-    bottom: 0;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 400 !important;
-    margin: 0 auto;
     display: block;
     padding: 17px 15px;
     border-radius: 8px;
@@ -1575,6 +1593,14 @@ header .welcome-txt .view-collection span {
   .mySwiper2 .prev,
   .mySwiper2 .next {
     display: none;
+  }
+  #flash-sale .sale-descr,
+  #flash-sale .sale-descr p {
+    text-align: center;
+  }
+  #flash-sale .mySwiper4 .book-sale {
+    width: 440px !important;
+    margin: 0 auto;
   }
 }
 @media (max-width: 800px) {
@@ -1664,6 +1690,12 @@ header .welcome-txt .view-collection span {
   }
   #about .col-10 .img {
     margin: 0 auto;
+  }
+  #flash-sale {
+    display: none;
+  }
+  #flash-sale .container-lg {
+    padding: 15px !important;
   }
   #testimonials .mySwiper3 .navigation {
     margin: 0 auto;

@@ -498,6 +498,7 @@ header {
 #best-sellers {
   h4 {
     font-weight: 700;
+    margin-bottom: 40px;
   }
   a {
     color: #9025ac;
@@ -613,7 +614,7 @@ header {
   background-color: #5b067d;
   padding: 70px 0;
   overflow: hidden;
-
+  margin: 30px 0;
   .sale-descr {
     color: $light;
     h1 {
@@ -656,31 +657,27 @@ header {
       }
     }
   }
-  .container-lg {
-    margin-right: 0;
-  }
+
   .mySwiper4 {
-    // left: 13%;
+    left: 15%;
 
     .swiper-wrapper {
-      left: 3%;
+      left: 2%;
 
       .swiper-slide {
-        // min-width: 380px;
-        // max-width: 420px;
-        margin-left: 20px;
+        width: 460px;
+
         .book-sale {
           background-color: #380b46;
           border-radius: 15px;
-          width: 440px;
-
+          width: 100%;
           height: 260px;
 
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
           padding: 17px;
-          box-shadow: 0px 0px 30px #380b46;
+          // box-shadow: 0px 0px 10px #380b46;
           // margin: 0 auto;
           .img-div {
             width: 40%;
@@ -742,7 +739,7 @@ header {
                 }
                 .progress {
                   height: 3px;
-                  width: 70%;
+                  width: 65%;
                   background-color: $secondaryColor;
                   margin: 10px 0 5px 0;
                 }
@@ -764,12 +761,12 @@ header {
                 background-color: $p-color1;
                 border-radius: 50%;
                 position: absolute;
-                right: 3%;
+                right: 0%;
                 top: 50%;
                 transform: translateY(-50%);
                 img {
-                  width: 40%;
-                  height: 40%;
+                  width: 35%;
+                  height: 35%;
                   position: absolute;
                   left: 50%;
                   top: 50%;
@@ -789,15 +786,11 @@ header {
       left: 1%;
     }
     .next {
-      right: 10%;
+      right: 15%;
     }
 
     .swiper-slide-next {
       filter: blur(1px);
-
-      // .book-info {
-      //   filter: blur(1px);
-      // }
     }
   }
 }
@@ -1429,23 +1422,24 @@ header {
   #subscribe {
     padding: 20px 0 50px !important;
   }
-  // #flash-sale {
-  //   .mySwiper4 {
-  //     left: 0;
-  //     .swiper-wrapper {
-  //       left: 0;
-  //     }
-  //     .swiper-slide {
-  //       width: 100% !important;
-  //     }
-  //   }
-  //   .prev {
-  //     left: 0%;
-  //   }
-  //   .next {
-  //     right: 3% !important;
-  //   }
-  // }
+  #flash-sale {
+    .mySwiper4 {
+      left: 0;
+      .swiper-wrapper {
+        left: 0;
+      }
+    }
+    .prev {
+      left: 0%;
+    }
+    .next {
+      right: 3% !important;
+    }
+
+    .sale-descr {
+      margin-bottom: 15px;
+    }
+  }
 }
 @media (max-width: 880px) {
   .mySwiper2 {
@@ -1455,6 +1449,7 @@ header {
       left: 0 !important;
       .swiper-slide {
         height: 100% !important;
+        margin: 0 auto !important;
       }
     }
 
@@ -1470,10 +1465,11 @@ header {
       }
       .book-descr {
         width: 100% !important;
-        padding: 5px 0 0 !important;
+        padding: 10px 0 0 !important;
         text-align: center;
         .book-title {
           padding-bottom: 10px !important;
+          padding-right: 0 !important;
         }
         .book-price {
           padding: 0 !important;
@@ -1487,16 +1483,17 @@ header {
       text-align: center;
       h4 {
         width: 100%;
+        margin-bottom: 20px !important;
       }
 
       a {
         position: absolute;
-        bottom: 0;
+        bottom: 80px;
         left: 50%;
         transform: translateX(-50%);
         font-weight: 400 !important;
-        margin: 0 auto;
-        // border: 2px solid $secondaryColor;
+        // margin: 0 auto;
+
         display: block;
         padding: 17px 15px;
         border-radius: 8px;
@@ -1515,6 +1512,20 @@ header {
     .prev,
     .next {
       display: none;
+    }
+  }
+
+  #flash-sale {
+    .sale-descr,
+    .sale-descr p {
+      text-align: center;
+    }
+
+    .mySwiper4 {
+      .book-sale {
+        width: 440px !important;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -1622,9 +1633,17 @@ header {
     }
   }
 
-  // #best-sellers {
-  //   display: none;
-  // }
+  #flash-sale {
+    display: none;
+    .container-lg {
+      padding: 15px !important;
+    }
+    .mySwiper4 {
+      .book-sale {
+        // width: 260px !important;
+      }
+    }
+  }
 
   #testimonials {
     .mySwiper3 {
