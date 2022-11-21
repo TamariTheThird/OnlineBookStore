@@ -35,12 +35,19 @@ $(document).ready(function () {
       prevEl: '.prev',
     },
     autoplay: {
-      delay: 3500,
+      delay: 2000,
       disableOnInteraction: false,
     },
     breakpoints: {
-      930: {
-        slidesPerView: 2,
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+      525: { slidesPerView: 2, slidesPerGroup: 2 },
+
+      1200: {
+        slidesPerView: 3,
         slidesPerGroup: 2,
       },
       1350: {
@@ -53,7 +60,7 @@ $(document).ready(function () {
 
   // testimonials
   var swiper = new Swiper('.mySwiper3', {
-    spaceBetween: 25,
+    spaceBetween: 20,
     loop: true,
     navigation: {
       nextEl: '.next',
@@ -63,15 +70,14 @@ $(document).ready(function () {
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 0,
       },
-      420: {
+      576: {
         slidesPerView: 2,
       },
-      900: {
+      825: {
         slidesPerView: 3,
       },
-      1400: {
+      1200: {
         slidesPerView: 4,
       },
     },
@@ -79,22 +85,36 @@ $(document).ready(function () {
 
   // flash sale
   var swiper = new Swiper('.mySwiper4', {
-    spaceBetween: 40,
-
-    // loop: true,
     navigation: {
       nextEl: '.next',
       prevEl: '.prev',
     },
+
+    loop: true,
+
+    slidesPerView: 2,
     // autoplay: {
     //   delay: 3500,
     //   disableOnInteraction: false,
     // },
-    breakpoints: {
-      930: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-    },
+    spaceBetween: 30,
+    // breakpoints: {
+    //   0: {
+    //     slidesPerView: 1,
+    //     slidesPerGroup: 1,
+    //     // spaceBetween: 0,
+    //   },
+    //   992: {
+    //     slidesPerView: 2,
+    //     slidesPerGroup: 1,
+    //     // spaceBetween: 100,
+    //     slidesPerGroupSkip: 1,
+    //   },
+    //   1400: {
+    //     slidesPerView: 2,
+
+    //     slidesPerGroup: 1,
+    //   },
+    // },
   });
 });

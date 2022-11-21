@@ -74,22 +74,6 @@ $light: white;
 }
 
 @mixin slider-navigation {
-  // .prev,
-  // .next {
-  //   width: 45px;
-  //   height: 45px;
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   top: 50%;
-
-  //   i {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //   }
-  // }
-
   .swiper-button-next::after,
   .swiper-button-prev::after {
     display: none;
@@ -113,6 +97,49 @@ $light: white;
   }
 }
 
+@mixin slider-navigation2 {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .prev,
+  .next {
+    background-color: white;
+    i {
+      color: $primaryColor;
+    }
+  }
+  .next:active,
+  .prev:active {
+    background-color: $primaryColor;
+    box-shadow: 0px 10px 15px rgb(235, 207, 246);
+
+    i {
+      color: white;
+    }
+  }
+}
+
+@mixin slider-navigation-align {
+  .prev,
+  .next {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
 @mixin trendbook-rating {
   display: inline-flex;
   align-items: center;
@@ -147,13 +174,24 @@ $light: white;
   }
 }
 
-@mixin bestseller-before-aft {
-  content: '';
-  display: block;
-  width: 95px;
-  height: 100%;
-  background-color: $light;
-  position: absolute;
-  top: 0;
-  z-index: 2;
+// @mixin bestseller-before-aft {
+//   content: '';
+//   display: block;
+//   width: 95px;
+//   height: 100%;
+//   background-color: $light;
+//   position: absolute;
+//   top: 0;
+//   z-index: 2;
+// }
+
+@mixin rating {
+  display: inline-block;
+  .fa-star {
+    color: $color1;
+    padding: 1px;
+  }
+  .checked {
+    color: $textColor;
+  }
 }
