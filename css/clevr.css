@@ -1304,7 +1304,6 @@ header .welcome-txt .view-collection span {
 }
 .modal .modal-dialog {
   width: 420px;
-  max-width: 100%;
 }
 .modal .modal-dialog .modal-content {
   background-color: #380b46;
