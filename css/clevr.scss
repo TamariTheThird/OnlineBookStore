@@ -1172,11 +1172,9 @@ header {
   background-color: $p-color2;
 
   .modal-dialog {
-    position: absolute;
+    width: 360px;
+    max-width: 100%;
 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 420px;
     .modal-content {
       background-color: $p-color2;
       padding: 10px;

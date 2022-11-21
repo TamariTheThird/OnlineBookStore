@@ -1303,10 +1303,8 @@ header .welcome-txt .view-collection span {
   background-color: #380b46;
 }
 .modal .modal-dialog {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 420px;
+  width: 360px;
+  max-width: 100%;
 }
 .modal .modal-dialog .modal-content {
   background-color: #380b46;
