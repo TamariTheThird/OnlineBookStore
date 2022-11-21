@@ -35,7 +35,7 @@ $(document).ready(function () {
       prevEl: '.prev',
     },
     autoplay: {
-      delay: 2000,
+      delay: 3500,
       disableOnInteraction: false,
     },
     breakpoints: {
