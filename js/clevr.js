@@ -35,25 +35,17 @@ $(document).ready(function () {
       prevEl: '.prev',
     },
     autoplay: { delay: 3000, disableOnInteraction: false },
-
+    slidesPerGroup: 1,
+    slidesPerGroupSkip: 1,
     breakpoints: {
       0: {
         slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
       },
       525: {
-        slidesPerView: 2,
-        slidesPerGroup: 1,
-      },
-
-      1200: {
         slidesPerView: 2,
       },
       1350: {
         slidesPerView: 3,
-        slidesPerGroup: 1,
-        slidesPerGroupSkip: 1,
       },
     },
   });

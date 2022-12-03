@@ -1545,7 +1545,7 @@ header .welcome-txt .view-collection span {
   }
   .mySwiper2 .swiper-wrapper {
     left: 0 !important;
-    height: 100vh;
+    height: 500px;
   }
   .mySwiper2 .bestsell {
     display: flex !important;
