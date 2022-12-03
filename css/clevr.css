@@ -369,6 +369,7 @@ header .welcome-txt .view-collection span {
 #about p {
   font-size: 11px;
   color: grey;
+  padding-right: 8px;
 }
 
 #trending {
@@ -622,9 +623,6 @@ header .welcome-txt .view-collection span {
 }
 #best-sellers .mySwiper2 .swiper-wrapper {
   left: 2%;
-}
-#best-sellers .mySwiper2 .swiper-slide {
-  height: 360px;
 }
 #best-sellers .mySwiper2 .swiper-slide .bestsell {
   width: 400px;
@@ -1196,7 +1194,6 @@ header .welcome-txt .view-collection span {
 }
 #footer .part1 p {
   padding: 25px 20px 20px 0;
-  max-width: 320px;
 }
 #footer .part1 h6 {
   padding: 10px 12px 10px 0;
@@ -1420,6 +1417,11 @@ header .welcome-txt .view-collection span {
   display: none;
 }
 
+@media (min-width: 1700px) {
+  .container-lg {
+    max-width: 1700px;
+  }
+}
 @media (min-width: 1240px) {
   .navbar .navbar-part1 {
     width: 640px;
@@ -1491,6 +1493,12 @@ header .welcome-txt .view-collection span {
   header .swiper-pagenation {
     bottom: -3% !important;
   }
+  #about .col-10 {
+    text-align: center;
+  }
+  #about .col-10 .img {
+    margin: 0 auto;
+  }
   .mySwiper3 {
     width: 100%;
   }
@@ -1508,6 +1516,9 @@ header .welcome-txt .view-collection span {
   footer .part1 {
     display: flex;
     justify-content: space-between;
+  }
+  footer .part4 {
+    text-align: right;
   }
   #subscribe {
     padding: 20px 0 50px !important;
@@ -1533,31 +1544,37 @@ header .welcome-txt .view-collection span {
     left: 0 !important;
   }
   .mySwiper2 .swiper-wrapper {
-    height: 600px;
     left: 0 !important;
-  }
-  .mySwiper2 .swiper-wrapper .swiper-slide {
-    height: 100% !important;
-    margin: 0 auto !important;
+    height: 100vh;
   }
   .mySwiper2 .bestsell {
     display: flex !important;
     flex-wrap: wrap !important;
     width: 200px !important;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
   .mySwiper2 .bestsell .book-cover {
     width: 100% !important;
     padding: 0 !important;
   }
+  .mySwiper2 .bestsell .book-info {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .mySwiper2 .bestsell .book-info .category,
+  .mySwiper2 .bestsell .book-info .rate {
+    width: max-content;
+  }
   .mySwiper2 .bestsell .book-descr {
     width: 100% !important;
-    padding: 10px 0 0 !important;
+    padding: 10px 0 0 0 !important;
     text-align: center;
   }
   .mySwiper2 .bestsell .book-descr .book-title {
-    padding-bottom: 10px !important;
-    padding-right: 0 !important;
+    padding: 10px 0 !important;
+  }
+  .mySwiper2 .bestsell .book-descr .author {
+    margin: 0 !important;
   }
   .mySwiper2 .bestsell .book-descr .book-price {
     padding: 0 !important;
@@ -1572,12 +1589,12 @@ header .welcome-txt .view-collection span {
   }
   .mySwiper2 .bestseller-header a {
     position: absolute;
-    bottom: 80px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 400 !important;
     display: block;
-    padding: 17px 15px;
+    padding: 15px;
     border-radius: 8px;
     background-color: #8d27ae;
     color: rgb(246, 246, 246) !important;
@@ -1682,12 +1699,6 @@ header .welcome-txt .view-collection span {
   header .mySwiper1 {
     display: none;
   }
-  #about .col-10 {
-    text-align: center;
-  }
-  #about .col-10 .img {
-    margin: 0 auto;
-  }
   #flash-sale {
     display: none;
   }
@@ -1710,6 +1721,10 @@ header .welcome-txt .view-collection span {
   }
   footer .part1 {
     display: block;
+    margin: 0 !important;
+  }
+  footer .part1 p {
+    padding-right: 0 !important;
   }
   .section-info {
     width: 80%;

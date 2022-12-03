@@ -27,32 +27,32 @@ $(document).ready(function () {
 
   // best sellers
   var swiper = new Swiper('.mySwiper2', {
-    spaceBetween: 40,
+    spaceBetween: 45,
 
     loop: true,
     navigation: {
       nextEl: '.next',
       prevEl: '.prev',
     },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
+    autoplay: { delay: 3000, disableOnInteraction: false },
+
     breakpoints: {
       0: {
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 0,
       },
-      525: { slidesPerView: 2, slidesPerGroup: 2 },
+      525: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+      },
 
       1200: {
-        slidesPerView: 3,
-        slidesPerGroup: 2,
+        slidesPerView: 2,
       },
       1350: {
         slidesPerView: 3,
-        slidesPerGroup: 2,
+        slidesPerGroup: 1,
         slidesPerGroupSkip: 1,
       },
     },

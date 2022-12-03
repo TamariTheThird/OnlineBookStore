@@ -368,7 +368,7 @@ header {
   p {
     font-size: 11px;
     color: grey;
-    // padding-right: 8px;
+    padding-right: 8px;
   }
 }
 
@@ -516,7 +516,7 @@ header {
     }
 
     .swiper-slide {
-      height: 360px;
+      // height: 360px;
 
       .bestsell {
         width: 400px;
@@ -1048,7 +1048,7 @@ header {
   .part1 {
     p {
       padding: 25px 20px 20px 0;
-      max-width: 320px;
+      // max-width: 320px;
     }
 
     h6 {
@@ -1308,7 +1308,12 @@ header {
 ::-webkit-scrollbar {
   display: none;
 }
-
+@media (min-width: 1700px) {
+  .container-lg {
+    max-width: 1700px;
+    // margin: 0 20px !important;
+  }
+}
 @media (min-width: 1240px) {
   .navbar {
     .navbar-part1 {
@@ -1391,6 +1396,15 @@ header {
       bottom: -3% !important;
     }
   }
+
+  #about {
+    .col-10 {
+      text-align: center;
+      .img {
+        margin: 0 auto;
+      }
+    }
+  }
   .mySwiper3 {
     width: 100%;
     .swiper-wrapper {
@@ -1413,11 +1427,16 @@ header {
       display: flex;
       justify-content: space-between;
     }
+
+    .part4 {
+      text-align: right;
+    }
   }
 
   #subscribe {
     padding: 20px 0 50px !important;
   }
+
   #flash-sale {
     .mySwiper4 {
       left: 0;
@@ -1441,12 +1460,8 @@ header {
   .mySwiper2 {
     left: 0 !important;
     .swiper-wrapper {
-      height: 600px;
       left: 0 !important;
-      .swiper-slide {
-        height: 100% !important;
-        margin: 0 auto !important;
-      }
+      height: 100vh;
     }
 
     .bestsell {
@@ -1454,19 +1469,34 @@ header {
       flex-wrap: wrap !important;
 
       width: 200px !important;
-      margin: 0 auto;
-
+      margin: 0 auto !important;
+      // height: 320px !important;
       .book-cover {
         width: 100% !important;
+        // display: none;
         padding: 0 !important;
+        // position: relative;
+      }
+      .book-info {
+        display: flex !important;
+        justify-content: center !important;
+
+        .category,
+        .rate {
+          width: max-content;
+        }
       }
       .book-descr {
         width: 100% !important;
-        padding: 10px 0 0 !important;
+
+        padding: 10px 0 0 0 !important;
+
         text-align: center;
         .book-title {
-          padding-bottom: 10px !important;
-          padding-right: 0 !important;
+          padding: 10px 0 !important;
+        }
+        .author {
+          margin: 0 !important;
         }
         .book-price {
           padding: 0 !important;
@@ -1478,6 +1508,7 @@ header {
       flex-wrap: wrap;
 
       text-align: center;
+
       h4 {
         width: 100%;
         margin-bottom: 10px !important;
@@ -1485,14 +1516,14 @@ header {
 
       a {
         position: absolute;
-        bottom: 80px;
+        bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
         font-weight: 400 !important;
         // margin: 0 auto;
 
         display: block;
-        padding: 17px 15px;
+        padding: 15px;
         border-radius: 8px;
         background-color: $primaryColor;
         color: rgb(246, 246, 246) !important;
@@ -1621,25 +1652,16 @@ header {
     }
   }
 
-  #about {
-    .col-10 {
-      text-align: center;
-      .img {
-        margin: 0 auto;
-      }
-    }
-  }
-
   #flash-sale {
     display: none;
     .container-lg {
       padding: 15px !important;
     }
-    .mySwiper4 {
-      .book-sale {
-        // width: 260px !important;
-      }
-    }
+    // .mySwiper4 {
+    //   .book-sale {
+    //     // width: 260px !important;
+    //   }
+    // }
   }
 
   #testimonials {
@@ -1664,6 +1686,10 @@ header {
   footer {
     .part1 {
       display: block;
+      margin: 0 !important;
+      p {
+        padding-right: 0 !important;
+      }
     }
   }
 
