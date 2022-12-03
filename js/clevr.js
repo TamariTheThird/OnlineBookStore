@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   // best sellers
   var swiper = new Swiper('.mySwiper2', {
-    spaceBetween: 55,
+    spaceBetween: 60,
 
     loop: true,
     navigation: {
