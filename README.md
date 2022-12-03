@@ -1,4 +1,2 @@
 # OnlineBookStore
 Clevr-OnlineBookStore
-
-#CLEVR
